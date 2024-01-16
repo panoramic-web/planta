@@ -18,17 +18,17 @@ function menufunc() {
    setTimeout(() => {
       menu_icon.classList.toggle('fixed');
    }, 100);
-};
+}
 
 menu_icon.onclick = () => {
    menufunc();
-}
+};
 
-for (var i = 0; i < menu_items.length; i++) {
-   menu_items[i].onclick = function() {
+menu_items.forEach(item => {
+   item.onclick = () => {
       menufunc();
-   }
-}
+   };
+});
 
 
 onscroll = () => {
@@ -41,18 +41,6 @@ onscroll = () => {
 };
 
 
-
-search_input.addEventListener('mousedown', () => {
-   search_box.classList.toggle('active');
-   buttons.style = 'justify-content:space-between; flex:12;';
-});
-search_input.addEventListener('mouseup', () => {
-   search_box.classList.toggle('active');
-   buttons.style = 'justify-content:flex-end; flex:3;';
-});
-
-
-
 const carousel_1 = new Swiper('.hero-swiper', {
    // Optional parameters
    direction: 'horizontal',
@@ -60,20 +48,32 @@ const carousel_1 = new Swiper('.hero-swiper', {
    autoplay: true,
    effect: 'fade',
 
-   // If we need pagination
-   // pagination: {
-   //    el: '.swiper-pagination',
-   // },
-
    // Navigation arrows
    navigation: {
       nextEl: '.hero-next',
       prevEl: '.hero-prev',
    },
 
+   // If we need pagination
+   // pagination: {
+   //    el: '.swiper-pagination',
+   // },
+
    // And if we need scrollbar
    // scrollbar: {
    //    el: '.swiper-scrollbar',
+   // },
+
+   // effect: 'creative',
+   // creativeEffect: {
+   //    prev: {
+   //       // will set `translateZ(-400px)` on previous slides
+   //       translate: [0, 0, -400],
+   //    },
+   //    next: {
+   //       // will set `translateX(100%)` on next slides
+   //       translate: ['100%', 0, 0],
+   //    },
    // },
 });
 
@@ -83,11 +83,6 @@ const carousel_2 = new Swiper('.product-swiper', {
    direction: 'horizontal',
    loop: true,
    autoplay: true,
-
-   // If we need pagination
-   // pagination: {
-   //    el: '.swiper-pagination',
-   // },
 
    // Responsive breakpoints
    breakpoints: {
@@ -128,6 +123,11 @@ const carousel_2 = new Swiper('.product-swiper', {
       nextEl: '.product-next',
       prevEl: '.product-prev',
    },
+
+   // If we need pagination
+   // pagination: {
+   //    el: '.swiper-pagination',
+   // },
 
    // And if we need scrollbar
    // scrollbar: {
@@ -184,10 +184,6 @@ const swiper = new Swiper('.swiper', {
    },
 });
 
-*/
-
-
-
 
 // const swiper = document.querySelector('.swiper').swiper;
 
@@ -226,5 +222,4 @@ stretch
 number
 0
 Stretch space between slides (in px)
-
 */
