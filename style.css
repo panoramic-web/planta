@@ -734,7 +734,6 @@ h6 {
 #footer {
    position: relative;
    width: 100%;
-   background: var(--primary-color);
    padding: 50px 8%;
    overflow: hidden;
 }
@@ -776,8 +775,8 @@ h6 {
    display: grid;
    gap: 2rem 1rem;
    grid-template-areas: "col1 col2 col4" "col1 col3 col5";
+   grid-template-areas: "col1 col2 col3 col4 col5" "col1 col2 col3 col4 col5";
    padding-bottom: 30px;
-   margin-bottom: 30px;
    border-bottom: 1px solid #fff5;
 }
 
@@ -821,27 +820,29 @@ h6 {
 
 #footer .brand_info p {
    width: 250px;
-   color: #fff;
+   color: #555;
    margin-bottom: 2rem;
 }
 
-#footer .brand_info .social-links {
+
+
+#footer .social-links {
    list-style-type: none;
    display: flex;
    margin: 0;
    padding: 0;
 }
 
-#footer .brand_info .social-links li {
+#footer .social-links li {
    margin-right: 20px;
 }
 
-#footer .brand_info .social-links li a {
+#footer .social-links li a {
    text-decoration: none;
    position: relative;
 }
 
-#footer .brand_info .social-links li a i {
+#footer .social-links li a i {
    display: flex;
    align-items: center;
    justify-content: center;
@@ -859,7 +860,7 @@ h6 {
 
 
 #footer [class*="column-"] h3 {
-   color: var(--secondary-color);
+   color: grey;
    font-weight: bold;
    margin-bottom: 1rem;
 }
@@ -869,7 +870,7 @@ h6 {
 }
 
 #footer [class*="column-"] ul li a {
-   color: #fff;
+   color: #555;
    transition: transform .3s, color .3s;
 }
 
@@ -885,7 +886,7 @@ h6 {
 
 
 #footer .footer-bottom p {
-   color: #fff;
+   color: #555;
    text-align: center;
 }
 
@@ -893,10 +894,10 @@ h6 {
 
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1200px) {
    #footer .mid-sections {
       display: grid;
-      grid-template-areas: "col1 col2" "col1 col3" "col4 col5";
+      grid-template-areas: "col1 col2 col3 col4" "col5 col5 col5 col5";
    }
 
    #footer .footer-bottom p {
@@ -904,10 +905,10 @@ h6 {
    }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 900px) {
    #footer .mid-sections {
       display: grid;
-      grid-template-areas: "col1 col1" "col2 col3" "col4 col5";
+      grid-template-areas: "col1 col2 col3" "col4 col5 col5";
    }
 
    #footer .brand_info p {
@@ -915,7 +916,15 @@ h6 {
    }
 }
 
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 500px) {
+   #footer .mid-sections {
+      display: grid;
+      grid-template-areas: "col1 col1" "col2 col3" "col4 col5";
+   }
+}
+
+
+@media only screen and (max-width: 400px) {
    #footer .mid-sections {
       display: grid;
       grid-template-areas: "col1" "col2" "col3" "col4" "col5";
