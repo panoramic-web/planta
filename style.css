@@ -805,7 +805,7 @@ h6 {
 
 
 #footer .brand_info .logo {
-   color: #fff;
+   color: var(--primary-color);
    font-size: 2rem;
    font-weight: bold;
    display: flex;
@@ -884,10 +884,17 @@ h6 {
 
 
 
+#footer .footer-bottom {
+   display: flex;
+   align-items: center;
+}
 
 #footer .footer-bottom p {
    color: #555;
-   text-align: center;
+   font-weight: 500;
+   border-left: 2px solid var(--primary-color);
+   padding-left: 10px;
+   margin-right: 10px;
 }
 
 
